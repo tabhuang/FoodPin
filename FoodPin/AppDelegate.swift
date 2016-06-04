@@ -16,6 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //修改導覽列的背景顏色
+        UINavigationBar.appearance().barTintColor = UIColor(red: 242.0/255.0, green: 116.0/255.0, blue: 119.0/255.0, alpha: 1.0)
+        //導覽項目與導覽列按鈕項目的顏色
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        //更改狀態欄的樣式
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
+        if let barFont = UIFont(name: "Avenir-Light", size: 24.0)
+        {
+            UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor(), NSFontAttributeName:barFont]
+        }
+        
         return true
     }
 
